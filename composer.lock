@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "21c6f1a005799ca8e2d1cf04759a2ad3",
+    "content-hash": "ad0be2c0685b13f9b3918d2ddb889575",
+    "packages": [
+        {
+            "name": "dunglas/php-torcontrol",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dunglas/php-torcontrol.git",
+                "reference": "ef908baf586acbc36dac4a2eed3a560894ffafee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dunglas/php-torcontrol/zipball/ef908baf586acbc36dac4a2eed3a560894ffafee",
+                "reference": "ef908baf586acbc36dac4a2eed3a560894ffafee",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TorControl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "dunglas@gmail.com",
+                    "homepage": "https://dunglas.fr"
+                }
+            ],
+            "description": "Tor control library",
+            "homepage": "https://dunglas.fr",
+            "keywords": [
+                "tor"
+            ],
+            "time": "2016-01-22 08:01:01"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.4"
+    },
+    "platform-dev": []
+}

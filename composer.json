@@ -1,0 +1,14 @@
+{
+    "name": "agubarev/php-tor-researching",
+    "description": "Tor research application",
+    "keywords": ["tor"],
+    "license": "MIT",
+    "authors": [{
+        "name": "Alex Gubarev",
+        "email": "alex.gubarev.web@gmail.com"
+    }],
+    "require": {
+        "php": ">=5.4",
+        "dunglas/php-torcontrol": "*"
+    }
+}
