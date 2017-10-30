@@ -2,6 +2,8 @@
 
 define('NUMBER_TIMES_RELOAD_IP', 3);
 define('PARSE_URL', 'https://www.amazon.com/AmazonBasics-360-Piece-Clear-Plastic-Cutlery/dp/B010RLC7P2/ref=sr_1_1?s=kitchen&srs=10112675011&ie=UTF8&qid=1509179091&sr=1-1');
+define('TOR_PASSWORD', 'my_password');
+define('SEARCH_BLOCKED_REGEXP', 'robot');
 
 // Autoloading using composer
 require 'vendor/autoload.php';
@@ -25,7 +27,7 @@ function reloadIP()
         array(
             'hostname' => 'localhost',
             'port'     => 9051,
-            'password' => 'my_password',
+            'password' => TOR_PASSWORD,
             'authmethod' => 1
         )
     );
@@ -47,13 +49,14 @@ function reloadIP()
 $prox = 'localhost:9050';
 $j = 0;
 for ($i=1; $i<=5;$i++) {
-    $a = get(PARSE_URL,$prox);
-    preg_match('/robot/', $a, $matches) == 1 ? $j++ : null;
+    echo $a = get(PARSE_URL,$prox);
+    preg_match('/' . SEARCH_BLOCKED_REGEXP .'/', $a, $matches) == 1 ? $j++ : null;
 }
-
+/*
 if ($j >= NUMBER_TIMES_RELOAD_IP) {
     $res = reloadIP();
     echo "It was $j capcha forms for robots and result of reload IP is $res\n";
 } else {
     echo "It was $j capcha forms for robots and IP was not reloaded\n";
 }
+*/
