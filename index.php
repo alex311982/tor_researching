@@ -49,14 +49,13 @@ function reloadIP()
 $prox = 'localhost:9050';
 $j = 0;
 for ($i=1; $i<=5;$i++) {
-    echo $a = get(PARSE_URL,$prox);
+    $a = get(PARSE_URL,$prox);
     preg_match('/' . SEARCH_BLOCKED_REGEXP .'/', $a, $matches) == 1 ? $j++ : null;
 }
-/*
+
 if ($j >= NUMBER_TIMES_RELOAD_IP) {
     $res = reloadIP();
     echo "It was $j capcha forms for robots and result of reload IP is $res\n";
 } else {
     echo "It was $j capcha forms for robots and IP was not reloaded\n";
 }
-*/
